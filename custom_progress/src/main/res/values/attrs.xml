@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomProgressView">
+        <attr name="total_progress" format="integer"/>
+        <attr name="current_progress" format="integer" />
+        <attr name="progress_color" format="color" />
+        <attr name="normal_color" format="color" />
+        <attr name="selected_color" format="color" />
+        <attr name="space" format="dimension" />
+        <attr name="height" format="dimension"/>
+        <attr name="progress_complete" format="boolean" />
+    </declare-styleable>
+</resources>

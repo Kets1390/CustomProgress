@@ -9,11 +9,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text=""
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_60sdp"
         android:id="@+id/textView"/>
     <com.custom_progress.CustomProgressView
         android:layout_width="wrap_content"
@@ -22,10 +23,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:progress_color="@android:color/holo_blue_dark"
-        app:current_progress="2"
+        app:current_progress="3"
         app:normal_color="#f4f4f4"
+        app:total_progress="7"
         app:selected_color="@android:color/holo_orange_dark"
-
+        android:id="@+id/FirstView"
         />
 
+    <com.custom_progress.CustomProgressView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/FirstView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:progress_color="#4d304e"
+        app:current_progress="3"
+        app:normal_color="#D6D9E1"
+        app:total_progress="7"
+        app:selected_color="#1eadc0"
+        android:id="@+id/SecondView"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+    <com.custom_progress.CustomProgressView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/SecondView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:progress_color="#4d304e"
+        app:current_progress="5"
+        app:normal_color="#D6D9E1"
+        app:total_progress="7"
+        app:selected_color="#1eadc0"
+        android:id="@+id/ThirdView"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:space="0dp"
+        />
+    <com.custom_progress.CustomProgressView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ThirdView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:progress_color="#4d304e"
+        app:current_progress="3"
+        app:normal_color="#D6D9E1"
+        app:total_progress="7"
+        app:selected_color="#1eadc0"
+        android:id="@+id/FourthView"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

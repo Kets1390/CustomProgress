@@ -32,6 +32,9 @@ public class CustomProgressView extends LinearLayout {
     private boolean isCompleted;
     public  CustomProgressView(Context context){
         super(context);
+        if(Space == 0){
+            Space = context.getResources().getDimensionPixelOffset(com.intuit.sdp.R.dimen._2sdp);
+        }
         SetData(context);
     }
     public CustomProgressView(Context context,  AttributeSet attrs) {
@@ -40,10 +43,10 @@ public class CustomProgressView extends LinearLayout {
     }
     public CustomProgressView(Context context,  AttributeSet attrs,int defStyle){
         super(context, attrs, defStyle);
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        height = displayMetrics.heightPixels;
-        width = displayMetrics.widthPixels;
+      //  DisplayMetrics displayMetrics = new DisplayMetrics();
+//        ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+//        height = displayMetrics.heightPixels;
+//        width = displayMetrics.widthPixels;
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CustomProgressView,0,0);
         try {
             Total_progress = a.getInt(R.styleable.CustomProgressView_total_progress,5);
@@ -60,7 +63,7 @@ public class CustomProgressView extends LinearLayout {
             SetData(context);
 
         }catch (Exception e){
-
+            e.printStackTrace();
         }
         finally {
             a.recycle();
@@ -70,9 +73,7 @@ public class CustomProgressView extends LinearLayout {
     public void SetData(Context context){
         if(Total_progress > 0){
             removeAllViews();
-            if(Space == 0){
-                Space = context.getResources().getDimensionPixelOffset(com.intuit.sdp.R.dimen._2sdp);
-            }
+
             if(ViewHeight == 0){
                 ViewHeight = context.getResources().getDimensionPixelOffset(com.intuit.sdp.R.dimen._15sdp);
             }
@@ -82,7 +83,8 @@ public class CustomProgressView extends LinearLayout {
             linearLayout.setLayoutParams(mainParams);
             for(int i=0;i<Total_progress;i++){
                 View childView = new View(context);
-                LayoutParams params = new LayoutParams((width/Total_progress),ViewHeight);
+                //LayoutParams params = new LayoutParams((width/Total_progress),ViewHeight);
+                LayoutParams params = new LayoutParams(0,ViewHeight);
                 params.setMargins(Space,0,Space,0);
                 params.weight=1;
                 childView.setLayoutParams(params);
@@ -114,6 +116,7 @@ public void setTotal_progress(Context context,int total_progress, int current_pr
 }
 public void setCurrent_progress(Context context, int current_progress){
         this.Current_progress =current_progress;
+
         if(Current_progress > Total_progress){
             isCompleted = true;
         }

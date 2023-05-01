@@ -1,7 +1,93 @@
+
 # Custom Progress
-1)Custom step progress view with three color (Progress color, current selected progress color, Unselected color)<br/>
-2)Set height<br/>
-3)Set space between the progress<br/>
-4)Set progress complete if you want fill all progress.<br/>
-![Screenshot_20230420_184618](https://user-images.githubusercontent.com/16476461/233382328-558fba74-a0fc-452b-997b-1940a880f2e9.png)
-![Screenshot_20230420_185933](https://user-images.githubusercontent.com/16476461/233382342-4a29e288-7b9f-45ec-8d45-56dc94f3ac70.png)
+
+
+
+
+
+- Custom step progress view with three color (Progress color, current selected progress color, Unselected color)
+- You can set custom height
+- You can set space between the progress
+- Set progress complete if you want fill all progress.
+
+
+## Screenshots
+
+![App Screenshot](https://i.ibb.co/10NMxsW/Screenshot-5.png)
+
+
+## Installation
+
+### Install Custome Progress for **gradle**
+- Add it in your root build.gradle at the end of repositories:
+
+```bash
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+- Add the dependency
+``` bash
+dependencies {
+	        implementation 'com.github.Kets1390:CustomeProgress:Latest_Version'
+	}
+
+```
+### Install Custome Progress for **maven**
+
+```bash
+    <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+- Add the dependency
+``` bash
+    <dependency>
+	    <groupId>com.github.Kets1390</groupId>
+	    <artifactId>CustomeProgress</artifactId>
+	    <version>1.1</version>
+	</dependency>
+```
+    
+## Attributes
+
+
+
+| Parameter | Type      | Default | Description |
+| :-------- | :-------  | :-----------| :------ |
+| `total_progress`      | `integer`   | **5** | Total Progress count  |
+| `current_progress`      | `integer`   | **0** | Current Progress count  |
+| `space`      | `dimension`   | **2dp** | Space between progress and set 0 for no need space  |
+| `height`      | `dimension`   | **15dp** | ProgressView height  |
+| `progress_color`      | `color`   | **Color.BLUE** | Completed progress color  |
+| `selected_color`      | `color`   | **Color.GREEN** | Selected/Current Progress color  |
+| `normal_color`      | `color`   | **Color.GRAY** | Unselected Progress color  |
+| `progress_complete`      | `boolean`   | **false** | **true** : All progress completed, **false**: All progress not completed    |
+
+
+
+
+
+## Set programmatically
+### Methods
+
+| Name | Parameters       | Description |
+| :-------- | :--------  | :---------- |
+| setTotal_progress | **Context** context, **int** total_progress,**int** current_progress |  Set total progress and current progress using this method.|
+|setCurrent_progress | **Context** context, **int** current_progress | Set current progress ussing this method. |
+| isProgressCompleted | **Context** context, **boolean** isComplete | Set all progress complete using this methos. |
+
+
+
+
+## Support
+
+For support, email kets1390ketu@gmail.com
+

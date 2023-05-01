@@ -55,7 +55,20 @@ dependencies {
 	    <version>1.1</version>
 	</dependency>
 ```
-    
+## XML
+``` bash
+  <com.custom_progress.CustomProgressView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	app:progress_color="#4d304e"
+        app:current_progress="5"
+        app:normal_color="#D6D9E1"
+        app:total_progress="7"
+        app:selected_color="#1eadc0"
+        android:id="@+id/ThirdView"
+        app:space="0dp"
+        />
+```
 ## Attributes
 
 

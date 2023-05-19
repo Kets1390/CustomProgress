@@ -18,7 +18,7 @@
 
 ## Installation
 
-### Install Custome Progress for **gradle**
+### Install Custom Progress for **gradle**
 - Add it in your root build.gradle at the end of repositories:
 
 ```bash
@@ -37,7 +37,7 @@ dependencies {
 	}
 
 ```
-### Install Custome Progress for **maven**
+### Install Custom Progress for **maven**
 
 ```bash
     <repositories>

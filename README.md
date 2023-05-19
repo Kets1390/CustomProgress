@@ -33,7 +33,7 @@ allprojects {
 - Add the dependency
 ``` bash
 dependencies {
-	        implementation 'com.github.Kets1390:CustomeProgress:Latest_Version'
+	        implementation 'com.github.Kets1390:CustomProgress:Latest_Version'
 	}
 
 ```
@@ -51,7 +51,7 @@ dependencies {
 ``` bash
     <dependency>
 	    <groupId>com.github.Kets1390</groupId>
-	    <artifactId>CustomeProgress</artifactId>
+	    <artifactId>CustomProgress</artifactId>
 	    <version>1.1</version>
 	</dependency>
 ```
